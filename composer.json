@@ -1,0 +1,46 @@
+{
+    "name": "walkerchiu/php-device-modbus",
+    "type": "library",
+    "authors": [
+        {
+            "name":  "Walker Chiu",
+            "email": "chenjen.chiou@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.3",
+        "walkerchiu/php-core": "^1.0"
+    },
+    "suggest": {
+        "walkerchiu/php-morph-image": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WalkerChiu\\DeviceModbus\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WalkerChiu\\DeviceModbus\\DeviceModbusServiceProvider"
+            ],
+            "aliases": {
+                "Channel":      "WalkerChiu\\DeviceModbus\\Models\\Entities\\Channel",
+                "Main":         "WalkerChiu\\DeviceModbus\\Models\\Entities\\Main",
+                "MainState":    "WalkerChiu\\DeviceModbus\\Models\\Entities\\MainState",
+                "Setting":      "WalkerChiu\\DeviceModbus\\Models\\Entities\\Setting",
+                "SettingState": "WalkerChiu\\DeviceModbus\\Models\\Entities\\SettingState",
+                "Address":      "WalkerChiu\\DeviceModbus\\Models\\Entities\\Address",
+                "Data":         "WalkerChiu\\DeviceModbus\\Models\\Entities\\Data"
+            }
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
